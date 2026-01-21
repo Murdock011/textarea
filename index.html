@@ -261,11 +261,373 @@
       visibility: hidden !important;
     }
   }
+
+  #password-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #password-dialog.visible {
+    display: flex;
+  }
+
+  #password-dialog .dialog-content {
+    background: var(--elevated);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+  }
+
+  #password-dialog h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  #password-dialog p {
+    margin: 0 0 20px 0;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #password-dialog p {
+      color: #999;
+    }
+  }
+
+  #password-dialog input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: system-ui;
+    background: var(--elevated);
+    color: var(--text);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #password-dialog input {
+      border-color: #444;
+    }
+  }
+
+  #password-dialog input:focus {
+    outline: 2px solid var(--outline);
+    border-color: transparent;
+  }
+
+  #password-dialog .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  #password-dialog button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: system-ui;
+  }
+
+  #password-dialog button.primary {
+    background: #0569fa;
+    color: white;
+  }
+
+  #password-dialog button.primary:hover {
+    background: #3c86f3;
+  }
+
+  #password-dialog button.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid #ddd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #password-dialog button.secondary {
+      border-color: #444;
+    }
+  }
+
+  #password-dialog button.secondary:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #password-dialog button.secondary:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  #password-dialog .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  #password-dialog .error {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+
+  #style-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #style-dialog.visible {
+    display: flex;
+  }
+
+  #style-dialog .dialog-content {
+    background: var(--elevated);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+  }
+
+  #style-dialog h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  #style-dialog p {
+    margin: 0 0 20px 0;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #style-dialog p {
+      color: #999;
+    }
+  }
+
+  #style-dialog textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-family: monospace;
+    background: var(--elevated);
+    color: var(--text);
+    min-height: 200px;
+    resize: vertical;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #style-dialog textarea {
+      border-color: #444;
+    }
+  }
+
+  #style-dialog textarea:focus {
+    outline: 2px solid var(--outline);
+    border-color: transparent;
+  }
+
+  #style-dialog .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  #style-dialog button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: system-ui;
+  }
+
+  #style-dialog button.primary {
+    background: #0569fa;
+    color: white;
+  }
+
+  #style-dialog button.primary:hover {
+    background: #3c86f3;
+  }
+
+  #style-dialog button.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid #ddd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #style-dialog button.secondary {
+      border-color: #444;
+    }
+  }
+
+  #style-dialog button.secondary:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #style-dialog button.secondary:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  #context-menu {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    background: var(--elevated);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    min-width: 180px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #context-menu.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #context-menu .context-item {
+    display: block;
+    padding: 10px 14px;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    background: none;
+    color: var(--text);
+    text-align: left;
+    width: 100%;
+    font: 14px / 1.5 system-ui;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    touch-action: manipulation;
+  }
+
+  #context-menu .context-item:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #context-menu .context-item:hover {
+      background-color: #353535;
+    }
+  }
+
+  #context-menu .context-item:active {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #context-menu .context-item:active {
+      background-color: #505050;
+    }
+  }
+
+  #context-menu .divider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 4px 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #context-menu .divider {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  #context-menu .toolbar {
+    display: flex;
+    gap: 4px;
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #context-menu .toolbar {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  #context-menu .toolbar button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--text);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    touch-action: manipulation;
+  }
+
+  #context-menu .toolbar button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #context-menu .toolbar button:hover {
+      background-color: #353535;
+    }
+  }
+
+  #context-menu .toolbar button:active {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #context-menu .toolbar button:active {
+      background-color: #505050;
+    }
+  }
 </style>
 <article contenteditable="plaintext-only" spellcheck autofocus></article>
 <button id="button" class="noprint">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-       stroke="currentColor"
+    stroke="currentColor"
        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="12" r="1"></circle>
     <circle cx="12" cy="5" r="1"></circle>
@@ -275,45 +637,113 @@
 <div id="menu" class="noprint" role="menu">
   <a class="item" href="#new" target="_blank" role="menuitem">
     <svg aria-hidden="true" focusable="false" width="22" height="22">
-      <use xlink:href="#icon-plus"></use>
+      <use href="#icon-plus"></use>
     </svg>
     New document
   </a>
   <a class="item" id="qr" href="/qr" role="menuitem">
     <svg aria-hidden="true" focusable="false" width="22" height="22">
-      <use xlink:href="#icon-qrcode"></use>
+      <use href="#icon-qrcode"></use>
     </svg>
     Generate QR code
   </a>
   <a class="item" id="share-link" href="" role="menuitem">
     <svg aria-hidden="true" focusable="false" width="22" height="22">
-      <use xlink:href="#icon-share"></use>
+      <use href="#icon-share"></use>
     </svg>
     Share document
   </a>
+  <a class="item" id="toggle-encryption" href="" role="menuitem">
+    <svg aria-hidden="true" focusable="false" width="22" height="22">
+      <use xlink:href="#icon-padlock"></use>
+    </svg>
+    <span id="encryption-status">Enable encryption</span>
+  </a>
   <a class="item" id="save-as-html" href="" role="menuitem">
     <svg aria-hidden="true" focusable="false" width="22" height="22">
-      <use xlink:href="#icon-empty"></use>
+      <use href="#icon-empty"></use>
     </svg>
     Save as HTML
   </a>
   <a class="item" id="save-as-text" href="" role="menuitem">
     <svg aria-hidden="true" focusable="false" width="22" height="22">
-      <use xlink:href="#icon-empty"></use>
+      <use href="#icon-empty"></use>
     </svg>
     Save as TEXT
   </a>
   <a class="item" href="https://github.com/antonmedv/textarea" target="_blank" role="menuitem">
     <svg aria-hidden="true" focusable="false" width="22" height="22">
-      <use xlink:href="#icon-github"></use>
+      <use href="#icon-github"></use>
     </svg>
     GitHub
   </a>
 </div>
 <div id="notification" class="noprint"></div>
+<div id="password-dialog" class="noprint">
+  <div class="dialog-content">
+    <h2 id="dialog-title">Password Required</h2>
+    <p id="dialog-description">
+      This document is encrypted. Enter the password to decrypt it.
+    </p>
+    <div
+      class="checkbox-container"
+      id="encryption-toggle-container"
+      style="display: none"
+    >
+      <input type="checkbox" id="enable-encryption" />
+      <label for="enable-encryption">Enable encryption for this document</label>
+    </div>
+    <input type="password" id="password-input" placeholder="Enter password" />
+    <div class="error" id="password-error" style="display: none"></div>
+    <div class="buttons">
+      <button class="secondary" id="password-cancel">Cancel</button>
+      <button class="primary" id="password-submit">OK</button>
+    </div>
+  </div>
+</div>
+<div id="context-menu" class="noprint">
+  <div class="toolbar">
+    <button id="copy-btn" title="Copy">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+      </svg>
+    </button>
+    <button id="cut-btn" title="Cut">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="6" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <path d="M20 4v14a2 2 0 0 1-2 2H8"></path>
+        <path d="M14 12a4 4 0 0 1-4 4"></path>
+      </svg>
+    </button>
+    <button id="paste-btn" title="Paste">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+        <path d="M9 14h6"></path>
+        <path d="M9 10h6"></path>
+      </svg>
+    </button>
+  </div>
+  <button class="context-item" data-format="bold">**Bold**</button>
+  <button class="context-item" data-format="italic">*Italic*</button>
+  <button class="context-item" data-format="code">`Code`</button>
+  <button class="context-item" data-format="strike">~~Strikethrough~~</button>
+  <button class="context-item" id="edit-style-btn" style="display: none;">Edit Style</button>
+</div>
+<div id="style-dialog" class="noprint">
+  <div class="dialog-content">
+    <h2>Edit Article Style</h2>
+    <p>Enter CSS code to style the article tag:</p>
+    <textarea id="style-input" placeholder="e.g. color: blue; background-color: lightyellow;"></textarea>
+    <div class="buttons">
+      <button class="secondary" id="style-cancel">Cancel</button>
+      <button class="primary" id="style-submit">Apply</button>
+    </div>
+  </div>
+</div>
 <script>
-  initUI()
-
   const article = document.querySelector('article')
   const editor = new Editor(article, parseMarkdown)
   article.addEventListener('input', debounce(500, save))
@@ -335,6 +765,185 @@
   }
 
   console.log('%cGitHub https://github.com/antonmedv/textarea', 'font-size: 16px; border: 1px solid lightblue; border-radius: 12px; padding: 10px 14px; ')
+
+  // State of the encryption
+  let encryptionPassword = null
+  let isEncrypted = false
+
+  // Sposta qui la funzione updateEncryptionStatus
+  function updateEncryptionStatus() {
+    const encryptionStatus = document.querySelector('#encryption-status')
+    if (encryptionStatus) {
+      if (isEncrypted) {
+        encryptionStatus.textContent = 'Disable encryption'
+      } else {
+        encryptionStatus.textContent = 'Enable encryption'
+      }
+    }
+  }
+
+  // Functions for encryption/decryption
+  async function deriveKey(password, salt) {
+    const encoder = new TextEncoder()
+    const keyMaterial = await crypto.subtle.importKey(
+      'raw',
+      encoder.encode(password),
+      { name: 'PBKDF2' },
+      false,
+      ['deriveBits', 'deriveKey'],
+    )
+    return crypto.subtle.deriveKey(
+      {
+        name: 'PBKDF2',
+        salt: salt,
+        iterations: 100000,
+        hash: 'SHA-256',
+      },
+      keyMaterial,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['encrypt', 'decrypt'],
+    )
+  }
+
+  async function encryptData(text, password) {
+    const encoder = new TextEncoder()
+    const data = encoder.encode(text)
+    const salt = crypto.getRandomValues(new Uint8Array(16))
+    const iv = crypto.getRandomValues(new Uint8Array(12))
+    const key = await deriveKey(password, salt)
+
+    const encrypted = await crypto.subtle.encrypt(
+      { name: 'AES-GCM', iv: iv },
+      key,
+      data,
+    )
+
+    // Combina salt + iv + encrypted data
+    const result = new Uint8Array(
+      salt.length + iv.length + encrypted.byteLength,
+    )
+    result.set(salt, 0)
+    result.set(iv, salt.length)
+    result.set(new Uint8Array(encrypted), salt.length + iv.length)
+
+    return result
+  }
+
+  async function decryptData(encryptedData, password) {
+    const salt = encryptedData.slice(0, 16)
+    const iv = encryptedData.slice(16, 28)
+    const data = encryptedData.slice(28)
+
+    const key = await deriveKey(password, salt)
+
+    try {
+      const decrypted = await crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: iv },
+        key,
+        data,
+      )
+      return new TextDecoder().decode(decrypted)
+    } catch (e) {
+      throw new Error('Wrong password or corrupted data')
+    }
+  }
+
+  function showPasswordDialog(mode = 'decrypt', callback) {
+    console.log('showPasswordDialog called with mode:', mode)
+    const dialog = document.getElementById('password-dialog')
+    const title = document.getElementById('dialog-title')
+    const description = document.getElementById('dialog-description')
+    const input = document.getElementById('password-input')
+    const error = document.getElementById('password-error')
+    const submit = document.getElementById('password-submit')
+    const cancel = document.getElementById('password-cancel')
+    const encryptionToggle = document.getElementById(
+      'encryption-toggle-container',
+    )
+    const enableEncryption = document.getElementById('enable-encryption')
+
+    console.log('Dialog element:', dialog)
+    console.log('Dialog element exists:', !!dialog)
+
+    if (!dialog) {
+      console.error('Password dialog element not found!')
+      return
+    }
+
+    input.value = ''
+    error.style.display = 'none'
+
+    if (mode === 'decrypt') {
+      title.textContent = 'Password Required'
+      description.textContent =
+        'This document is encrypted. Enter the password to decrypt it.'
+      encryptionToggle.style.display = 'none'
+    } else if (mode === 'set') {
+      title.textContent = 'Set Password'
+      description.textContent =
+        'Enter a password to encrypt this document. Anyone with the link will need this password to view the content.'
+      encryptionToggle.style.display = 'none'
+    } else if (mode === 'ask') {
+      title.textContent = 'Document Encryption'
+      description.textContent =
+        'Do you want to encrypt this document with a password?'
+      encryptionToggle.style.display = 'flex'
+      enableEncryption.checked = false
+    }
+
+    const cleanup = () => {
+      submit.onclick = null
+      cancel.onclick = null
+      input.onkeypress = null
+    }
+
+    const handleSubmit = async () => {
+      if (mode === 'ask' && !enableEncryption.checked) {
+        cleanup()
+        dialog.classList.remove('visible')
+        callback(null)
+        return
+      }
+
+      const password = input.value
+      if (!password || password.trim() === '') {
+        error.textContent = 'Password is required'
+        error.style.display = 'block'
+        return
+      }
+
+      cleanup()
+      dialog.classList.remove('visible')
+      callback(password)
+    }
+
+    const handleCancel = () => {
+      cleanup()
+      dialog.classList.remove('visible')
+      callback(null)
+    }
+
+    const handleKeypress = (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault()
+        handleSubmit()
+      } else if (e.key === 'Escape') {
+        e.preventDefault()
+        handleCancel()
+      }
+    }
+
+    // Ensure previous handlers are removed
+    cleanup()
+
+    submit.onclick = handleSubmit
+    cancel.onclick = handleCancel
+    input.onkeypress = handleKeypress
+
+    dialog.classList.add('visible')
+    setTimeout(() => input.focus(), 100)
+  }
 
   async function load() {
     try {
@@ -362,15 +971,113 @@
 
   async function set(hash) {
     if (!hash) return
-    const [content, style] = (await decompress(hash.slice(1))).split('\x00')
-    editor.set(content)
-    if (style) article.setAttribute('style', style)
+
+    try {
+      let decompressed = await decompress(hash.slice(1))
+
+      console.log(
+        'Decompressed data starts with:',
+        decompressed.substring(0, 10)
+      )
+
+      // Check if the data is encrypted (starts with 'ENC:')
+      if (decompressed.startsWith('ENC:')) {
+        console.log('Encrypted document detected, showing password dialog')
+        const encryptedB64 = decompressed.slice(4)
+        const encryptedData = Uint8Array.fromBase64(encryptedB64, {
+          alphabet: 'base64url',
+        })
+
+        // Ask for the password
+        const tryDecrypt = async () => {
+          return new Promise((resolve) => {
+            showPasswordDialog('decrypt', async (password) => {
+              if (!password) {
+                article.textContent = ''
+                resolve()
+                return
+              }
+
+              try {
+                decompressed = await decryptData(encryptedData, password)
+                isEncrypted = true
+                encryptionPassword = password
+
+                const [content, style] = decompressed.split('\x00')
+                const sanitizedContent = content || ''
+                editor.set(sanitizedContent)
+
+                if (style) {
+                  const sanitizedStyle = style.replace(/[<>"']/g, '')
+                  if (!sanitizedStyle.match(/url\(|javascript:/i)) {
+                    article.setAttribute('style', sanitizedStyle)
+                  }
+                }
+
+                // Update UI to reflect encrypted state
+                updateEncryptionStatus()
+
+                await save()
+
+                resolve()
+              } catch (e) {
+                // Wrong password, show error and retry
+                console.error('Wrong password, retrying...', e)
+                setTimeout(() => {
+                  const errorEl = document.getElementById('password-error')
+                  if (errorEl) {
+                    errorEl.textContent = 'Wrong password. Try again.'
+                    errorEl.style.display = 'block'
+                  }
+                  // Recursively call to retry
+                  tryDecrypt().then(resolve)
+                }, 50)
+              }
+            })
+          })
+        }
+
+        await tryDecrypt()
+      } else {
+        console.log('Unencrypted document')
+        // Not encrypted - reset encryption state
+        isEncrypted = false
+        encryptionPassword = null
+        
+        const [content, style] = decompressed.split('\x00')
+        const sanitizedContent = content || ''
+        editor.set(sanitizedContent)
+
+        if (style) {
+          const sanitizedStyle = style.replace(/[<>"']/g, '')
+          if (!sanitizedStyle.match(/url\(|javascript:/i)) {
+            article.setAttribute('style', sanitizedStyle)
+          }
+        }
+        
+        // Update UI to reflect unencrypted state
+        updateEncryptionStatus()
+      }
+    } catch (e) {
+      console.error('Error decrypting:', e)
+      throw e
+    }
   }
 
   async function get() {
     const style = article.getAttribute('style')
     const content = article.textContent + (style !== null ? '\x00' + style : '')
-    return '#' + await compress(content)
+
+    // If it is encrypted and we have the password, encrypt
+    if (isEncrypted && encryptionPassword) {
+      const encrypted = await encryptData(content, encryptionPassword)
+      const encryptedB64 = encrypted.toBase64({ alphabet: 'base64url' })
+      const combined = 'ENC:' + encryptedB64
+      return '#' + (await compress(combined))
+    }
+
+    // Otherwise save without encryption
+    return '#' + (await compress(content))
   }
 
   function updateTitle() {
@@ -419,7 +1126,7 @@
         const handle = await showSaveFilePicker({
           suggestedName: document.title + '.html',
           types: [{
-            description: 'HTML file',
+              description: 'HTML file',
             accept: {'text/html': ['.html']},
           }],
         })
@@ -450,7 +1157,7 @@
         const handle = await showSaveFilePicker({
           suggestedName: document.title + '.txt',
           types: [{
-            description: 'TEXT file',
+              description: 'TEXT file',
             accept: {'text/plain': ['.txt']},
           }],
         })
@@ -554,6 +1261,11 @@
     const shareLink = document.querySelector('#share-link')
     const saveAsHTML = document.querySelector('#save-as-html')
     const saveAsText = document.querySelector('#save-as-text')
+    const toggleEncryption = document.querySelector('#toggle-encryption')
+    const encryptionStatus = document.querySelector('#encryption-status')
+    const contextMenu = document.querySelector('#context-menu')
+
+    updateEncryptionStatus()
 
     button.addEventListener('click', event => {
       if (event.clientX || event.targetTouches) ripple(event)
@@ -566,6 +1278,10 @@
       menu.classList.remove('visible')
     }
 
+    function hideContextMenu() {
+      contextMenu.classList.remove('visible')
+    }
+
     function notify(message) {
       const notification = document.querySelector('#notification')
       notification.classList.add('visible')
@@ -573,12 +1289,195 @@
       setTimeout(() => notification.classList.remove('visible'), 2e3)
     }
 
+    function applyFormatting(format) {
+    
+      const selection = document.getSelection()
+      if (!selection.toString()) return
+
+      const selectedText = selection.toString()
+      let formattedText
+
+      const formatters = {
+        bold: { prefix: '**', suffix: '**' },
+        italic: { prefix: '*', suffix: '*' },
+        code: { prefix: '`', suffix: '`' },
+        strike: { prefix: '~~', suffix: '~~' }
+      }
+
+      if (!formatters[format]) return
+
+      const { prefix, suffix } = formatters[format]
+
+      // Scan through the selected text for any existing formatting
+      let textToFormat = selectedText
+      let foundFormattingType = null
+      
+      for (const [key, formatter] of Object.entries(formatters)) {
+        const { prefix: p, suffix: s } = formatter
+        if (textToFormat.includes(p) && textToFormat.includes(s)) {
+          // Find and remove the edit
+          const startIdx = textToFormat.indexOf(p)
+          const endIdx = textToFormat.lastIndexOf(s)
+          if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
+            foundFormattingType = key
+            textToFormat = textToFormat.slice(0, startIdx) + 
+                          textToFormat.slice(startIdx + p.length, endIdx) + 
+                          textToFormat.slice(endIdx + s.length)
+            break
+          }
+        }
+      }
+
+      // Now apply the desired formatting
+      if (foundFormattingType === format) {
+        // Same formatting was found, so toggle it off
+        formattedText = textToFormat
+      } else if (textToFormat.startsWith(prefix) && textToFormat.endsWith(suffix)) {
+        // Remove different formatting
+        formattedText = textToFormat.slice(prefix.length, -suffix.length)
+      } else {
+        // Add formatting
+        formattedText = `${prefix}${textToFormat}${suffix}`
+      }
+
+      // Replace selected text with formatted text
+      const range = selection.getRangeAt(0)
+      range.deleteContents()
+      const textNode = document.createTextNode(formattedText)
+      range.insertNode(textNode)
+
+      // Run the parser to apply formatting classes
+      parseMarkdown(article)
+
+      // Trigger input event to save changes
+      article.dispatchEvent(new Event('input', { bubbles: true }))
+
+      hideContextMenu()
+    }
+
     document.body.addEventListener('click', event => {
       let t = event.target
       if (t.closest('#menu')) return
       if (t.closest('#button')) return
       if (t.closest('.ripple')) return
+      if (t.closest('#context-menu')) return
       menu.classList.remove('visible')
+      hideContextMenu()
+    })
+
+    // Context menu for text formatting
+    article.addEventListener('contextmenu', event => {
+      event.preventDefault()
+      const selection = document.getSelection()
+      const hasSelection = selection.toString().length > 0
+      
+      // Show/hide formatting items based on selection
+      contextMenu.querySelectorAll('.context-item:not(#edit-style-btn)').forEach(item => {
+        item.style.display = hasSelection ? 'block' : 'none'
+      })
+      
+      // Show/hide edit style button based on selection
+      const editStyleBtn = document.getElementById('edit-style-btn')
+      editStyleBtn.style.display = hasSelection ? 'none' : 'block'
+      
+      contextMenu.style.left = event.pageX + 'px'
+      contextMenu.style.top = event.pageY + 'px'
+      contextMenu.classList.add('visible')
+    })
+
+    // Handle context menu item clicks
+    contextMenu.querySelectorAll('.context-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const format = item.getAttribute('data-format')
+        if (format) {
+          applyFormatting(format)
+        }
+      })
+    })
+
+    // Edit Style button
+    document.getElementById('edit-style-btn').addEventListener('click', () => {
+      const styleDialog = document.getElementById('style-dialog')
+      const styleInput = document.getElementById('style-input')
+      styleInput.value = article.getAttribute('style') || ''
+      styleDialog.classList.add('visible')
+      hideContextMenu()
+      setTimeout(() => styleInput.focus(), 100)
+    })
+
+    // Style dialog handlers
+    document.getElementById('style-submit').addEventListener('click', () => {
+      const styleInput = document.getElementById('style-input')
+      const css = styleInput.value.trim()
+      if (css) {
+        article.setAttribute('style', css)
+      } else {
+        article.removeAttribute('style')
+      }
+      article.dispatchEvent(new Event('input', { bubbles: true }))
+      document.getElementById('style-dialog').classList.remove('visible')
+    })
+
+    document.getElementById('style-cancel').addEventListener('click', () => {
+      document.getElementById('style-dialog').classList.remove('visible')
+    })
+
+    // Close style dialog on Escape
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        const styleDialog = document.getElementById('style-dialog')
+        if (styleDialog.classList.contains('visible')) {
+          styleDialog.classList.remove('visible')
+        }
+      }
+    })
+
+    // Copy button
+    document.getElementById('copy-btn').addEventListener('click', async () => {
+      const selection = document.getSelection()
+      if (selection.toString()) {
+        try {
+          await navigator.clipboard.writeText(selection.toString())
+          hideContextMenu()
+        } catch (err) {
+          console.error('Failed to copy:', err)
+        }
+      }
+    })
+
+    // Cut button
+    document.getElementById('cut-btn').addEventListener('click', async () => {
+      const selection = document.getSelection()
+      if (selection.toString()) {
+        try {
+          await navigator.clipboard.writeText(selection.toString())
+          // Delete the selected text
+          const range = selection.getRangeAt(0)
+          range.deleteContents()
+          article.dispatchEvent(new Event('input', { bubbles: true }))
+          hideContextMenu()
+        } catch (err) {
+          console.error('Failed to cut:', err)
+        }
+      }
+    })
+
+    // Paste button
+    document.getElementById('paste-btn').addEventListener('click', async () => {
+      try {
+        const text = await navigator.clipboard.readText()
+        const selection = document.getSelection()
+        if (selection.rangeCount > 0) {
+          const range = selection.getRangeAt(0)
+          range.deleteContents()
+          const textNode = document.createTextNode(text)
+          range.insertNode(textNode)
+          article.dispatchEvent(new Event('input', { bubbles: true }))
+          hideContextMenu()
+        }
+      } catch (err) {
+        console.error('Failed to paste:', err)
+      }
     })
 
     shareLink.addEventListener('click', event => {
@@ -600,6 +1499,38 @@
       event.preventDefault()
       downloadTXT()
       hideMenu()
+    })
+    toggleEncryption.addEventListener('click', (event) => {
+      event.preventDefault()
+      hideMenu()
+
+      if (isEncrypted) {
+        // Disable encryption
+        if (
+          confirm(
+            'Are you sure you want to disable encryption? The document will be saved unencrypted.',
+          )
+        ) {
+          isEncrypted = false
+          encryptionPassword = null
+          updateEncryptionStatus()
+          // Force immediate save to regenerate hash without encryption
+          save().then(() => {
+            notify('Encryption disabled')
+          })
+        }
+      } else {
+        // Enable encryption
+        showPasswordDialog('set', async (password) => {
+          if (password) {
+            isEncrypted = true
+            encryptionPassword = password
+            updateEncryptionStatus()
+            await save()
+            notify('Encryption enabled')
+          }
+        })
+      }
     })
   }
 
@@ -894,6 +1825,8 @@
       },
     }
   }
+
+  initUI()
 </script>
 <svg style="display: none" aria-hidden="true" focusable="false">
   <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -904,7 +1837,7 @@
     <path d="M5 12l14 0"/>
   </symbol>
   <symbol id="icon-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"
-          stroke-linecap="round"
+    stroke-linecap="round"
           stroke-linejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
     <path d="M8 9h-1a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-8a2 2 0 0 0 -2 -2h-1"/>
